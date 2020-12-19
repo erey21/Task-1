@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 // функция проверки чётности числа с возвращением значения
@@ -9,12 +9,12 @@ int parity(int num) {
 
     if (answer == 0) {
         cout << "The number is parity" << endl;
-        cout  << sizeof(answer);
+        cout  << "Size: " << sizeof(answer) << endl;
         return answer;
     }
     else {
         cout << "The number is not parity" << endl;
-        cout  << sizeof(answer);
+        cout << "Size: " << sizeof(answer) << endl;
         return answer;
     }
 }
@@ -23,13 +23,13 @@ int parity(int num) {
 bool Is_parity(int num) {
     bool ans = num % 2;
     if (ans == 0) {
-        cout << "The number is parity";
-        cout << endl << sizeof(ans);
+        cout << "The number is parity" << endl;
+        cout << "Size: " << sizeof(ans) << endl;
         return ans;
     }
     else {
         cout << "The number is not parity" << endl;
-        cout << sizeof(ans);
+        cout << "Size: " << sizeof(ans) << endl;
         return ans;
     }
 
@@ -40,14 +40,16 @@ bool Is_parity(int num) {
 
 int main()
 {
-    int num;
-    cin >> num;
-
+    int num, num_1;
     
-    Is_parity(num);
+    cin >> num >> num_1;
+
+    parity(num);
+    Is_parity(num_1);
 
 
     return 0;
 }
+
 
 
